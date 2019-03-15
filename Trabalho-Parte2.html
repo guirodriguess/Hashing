@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var vet = new Array(5);
+        var x,y,i;
+        var aux;
+        function hashing(){
+            x = document.getElementById("chave").value;
+            aux = x.charCodeAt(); //converte caracter em número inteiro
+            y = aux % 7;
+            while (vet[y] != ""){
+                y = y+1;
+            } 
+            vet[y] = x;
+            console.log(vet);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="chave" placeholder="Digite um caracter">
+    <button onclick="hashing()">Inserir</button>
+</body>
+</html>
